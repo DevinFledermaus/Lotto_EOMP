@@ -1,9 +1,11 @@
 # Devin Fledermaus Class 1
+import uuid
 from tkinter import *
 from tkinter import messagebox
 import re
-from datetime import date
+from datetime import date, datetime
 from playsound import playsound
+from uuid import uuid4
 
 
 # Creating the window
@@ -13,20 +15,50 @@ root.resizable(False, False)
 root.title("Login Page")
 root.config(bg="blue")
 
+now = datetime.now()
+
 
 # Defining my button commands
-# Verify Button
-def enter():
+# Enter Button
+def next_window():
     root.destroy()
     import main2
 
 
-def id_check():
+# Verifying Age
+def age_check():
+    # player ID
+    player_id = uuid.uuid4()
+
+    # text filef
+    w = open("user_details.txt", "a+")
+    w.write(ent1.get() + " " + " " + ent2.get() + " " + " " + ent3.get() + " " + " " + "Player-ID: " + str(player_id) + " " + " " + "Logged in at " + str(now) + "\n")
+    w.close()
+
+    id_num = ent3.get()
+    year = id_num[:2]
+    if year >= "22":
+        year = "19" + year
+    else:
+        year = "20" + year
+    month = id_num[2:4]
+    day = id_num[4:6]
+    dob = year, month, day
+    today = date.today()
+    age = today.year - int(year) - ((today.month, today.day) < (int(month), int(day)))
+    if age >= 18:
+        playsound("enter.mp3")
+        messagebox.showinfo("Status Feedback", "Let's Play")
+        next_window()
+    elif age < 18:
+        messagebox.showerror("ERROR", "You are too young bud, try again next year")
+
+
+def enter():
     # variables
     idnum = ent3.get()
     email_ad = ent2.get()
-    regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
-    today_date = date.today()
+    regex = '^[a-z0-9]+[\._]?[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
     # conditions
     if len(ent3.get()) > 13 or len(ent3.get()) < 13:
         playsound("sheesh_falcetto.mp3")
@@ -38,7 +70,7 @@ def id_check():
         playsound("sheesh_falcetto.mp3")
         messagebox.showerror("ERROR", "Please check if the email is correct")
     else:
-        enter()
+        age_check()
 
 
 # Defining My Clear Button
@@ -78,7 +110,7 @@ ent3.place(x=230, y=340)
 
 
 # Buttons
-btn = Button(root, text="Enter", width=10, bg="green", command=id_check, borderwidth=5)
+btn = Button(root, text="Enter", width=10, bg="green", command=enter, borderwidth=5)
 btn.place(x=300, y=430)
 clrbtn = Button(root, text="Clear", width=10, bg="green", command=clear, borderwidth=5)
 clrbtn.place(x=100, y=430)

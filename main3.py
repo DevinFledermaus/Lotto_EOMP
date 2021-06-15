@@ -19,6 +19,7 @@ def verify():
 
 
 def check():
+
     sel = ent1.get()
     sel2 = ent2.get()
 

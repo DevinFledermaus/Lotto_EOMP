@@ -17,10 +17,42 @@ root.config(bg="blue")
 # Play Button
 def verify():
     try:
-        root.destroy()
-        import main2
-    except:
-        pass
+        playsound("roll.mp3")
+        nums = list(range(1, 49))
+        random.shuffle(nums)
+        lotto_draw = nums[:6]
+
+        num1['state'] = "normal"
+        num1.delete(0, END)
+        num1.insert(0, lotto_draw[0])
+        num1['state'] = "readonly"
+
+        num2['state'] = "normal"
+        num2.delete(0, END)
+        num2.insert(0, lotto_draw[1])
+        num2['state'] = "readonly"
+
+        num3['state'] = "normal"
+        num3.delete(0, END)
+        num3.insert(0, lotto_draw[2])
+        num3['state'] = "readonly"
+
+        num4['state'] = "normal"
+        num4.delete(0, END)
+        num4.insert(0, lotto_draw[3])
+        num4['state'] = "readonly"
+
+        num5['state'] = "normal"
+        num5.delete(0, END)
+        num5.insert(0, lotto_draw[4])
+        num5['state'] = "readonly"
+
+        num6['state'] = "normal"
+        num6.delete(0, END)
+        num6.insert(0, lotto_draw[5])
+        num6['state'] = "readonly"
+    except ValueError:
+        messagebox.showerror("Something Went Wrong", "Please enter only numbers")
 
 
 def submit():
@@ -37,6 +69,24 @@ def clear():
     spnbox4.delete(0, END)
     spnbox5.delete(0, END)
     spnbox6.delete(0, END)
+    num1['state'] = "normal"
+    num1.delete(0, END)
+    num1['state'] = "readonly"
+    num2['state'] = "normal"
+    num2.delete(0, END)
+    num2['state'] = "readonly"
+    num3['state'] = "normal"
+    num3.delete(0, END)
+    num3['state'] = "readonly"
+    num4['state'] = "normal"
+    num4.delete(0, END)
+    num4['state'] = "readonly"
+    num5['state'] = "normal"
+    num5.delete(0, END)
+    num5['state'] = "readonly"
+    num6['state'] = "normal"
+    num6.delete(0, END)
+    num6['state'] = "readonly"
 
 
 # Exit Button
@@ -83,7 +133,7 @@ num6.place(x=820, y=420)
 
 
 # Buttons
-btn = Button(root, text="Play", width=10, bg="green", command=verify, borderwidth=5)
+btn = Button(root, text="ROLL", width=10, bg="green", command=verify, borderwidth=5)
 btn.place(x=290, y=300)
 btn2 = Button(root, text="Play Again", width=10, bg="green", command=verify, borderwidth=5)
 btn2.place(x=550, y=300)
