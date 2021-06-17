@@ -43,10 +43,23 @@
 # player_id = uuid.uuid4()
 # print(player_id)
 
-from uuid import uuid4
+# from uuid import uuid4
+#
+# students = ["piet", "jan", "koos", "donny"]
+#
+# for students in students:
+#     player_id = str(uuid4())
+#     print('{} : {}'.format(students, player_id))
 
-students = ["piet", "jan", "koos", "donny"]
+my_list1 = [23, 24, 39, 11]
+my_list2 = [4, 23, 24, 14]
+results = list(set(my_list1).intersection(my_list2))
 
-for students in students:
-    player_id = str(uuid4())
-    print('{} : {}'.format(students, player_id))
+
+print(results)
+print(len(results))
+
+prizes = {6: "R10 000 000.00", 5: "R8 584.00", 4: "R2 384.00", 3: "R100.50", 2: "R20.00", 1: "R0", 0: "R0"}
+my_key = len(results)
+x = {prizes.get(my_key)}
+print(x)

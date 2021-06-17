@@ -30,7 +30,7 @@ def age_check():
     # player ID
     player_id = uuid.uuid4()
 
-    # text filef
+    # text file
     w = open("user_details.txt", "a+")
     w.write(ent1.get() + " " + " " + ent2.get() + " " + " " + ent3.get() + " " + " " + "Player-ID: " + str(player_id) + " " + " " + "Logged in at " + str(now) + "\n")
     w.close()
@@ -60,7 +60,10 @@ def enter():
     email_ad = ent2.get()
     regex = '^[a-z0-9]+[\._]?[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
     # conditions
-    if len(ent3.get()) > 13 or len(ent3.get()) < 13:
+    if ent1.get() == "":
+        playsound("sheesh_falcetto.mp3")
+        messagebox.showerror("ERROR", "Please enter your name")
+    elif len(ent3.get()) > 13 or len(ent3.get()) < 13:
         playsound("sheesh_falcetto.mp3")
         messagebox.showerror("ERROR", "ID Number must contain 13 numbers")
     elif not idnum.isdigit():
