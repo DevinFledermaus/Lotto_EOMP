@@ -3,82 +3,130 @@ import tkinter
 from tkinter import *
 from tkinter import messagebox
 from playsound import playsound
+import requests
+from datetime import datetime
 
 
 # Creating the window
 root = Tk()
-root.geometry("500x400")
+root.geometry("700x800")
 root.resizable(False, False)
 root.title("Banking Details")
 root.config(bg="blue")
 
-
-# Defining the buttons
-def verify():
-    pass
+now = datetime.now()
 
 
-def check():
+class BankDetails:
 
-    sel = ent1.get()
-    sel2 = ent2.get()
+    def __init__(self, window):
+        # Labels
+        self.lbl1 = Label(window, text="Banking Details", font=("Arial", 30))
+        self.lbl1.place(x=200, y=30)
+        self.lbl2 = Label(window, text="Account Holder Name", font=("Arial", 15))
+        self.lbl2.place(x=50, y=100)
+        self.lbl3 = Label(window, text="Account number", font=("Arial", 15))
+        self.lbl3.place(x=50, y=150)
+        self.lbl4 = Label(window, text="Bank", font=("Arial", 15))
+        self.lbl4.place(x=50, y=200)
+        # Entries
+        self.ent1 = Entry(root, width=30)
+        self.ent1.place(x=300, y=100)
+        self.ent2 = Entry(root, width=30)
+        self.ent2.place(x=300, y=150)
+        self.ent3 = Entry(root, width=20)
+        self.ent3.place(x=150, y=500)
+        self.ent4 = Entry(root, width=20)
+        self.ent4.place(x=150, y=650)
+        # OptionMenu
+        self.default_txt = "Select Bank"
+        self.default_var = tkinter.StringVar(value=self.default_txt)
+        self.optmenu = OptionMenu(root, self.default_var, "Absa Bank", "Capitec Bank", "Standard Bank", "First National Bank")
+        self.optmenu.place(x=300, y=200)
+        # Buttons
+        self.btn = Button(root, text="Submit", width=5, bg="green", command=self.check, borderwidth=5)
+        self.btn.place(x=300, y=320)
+        self.clrbtn = Button(root, text="Clear", width=5, bg="green", command=self.clear, borderwidth=5)
+        self.clrbtn.place(x=150, y=320)
+        self.extbtn = Button(root, text="Exit", width=5, bg="green", command=self.exit_btn, borderwidth=5)
+        self.extbtn.place(x=450, y=320)
+        self.conbtn = Button(root, text="Convert", width=16, bg="green", command=self.convert, borderwidth=5)
+        self.conbtn.place(x=150, y=570)
+        # Retrieving the information from an external JSON file as a source of reference
+        self.conversion_rate = {}
+        try:
+            self.information = requests.get('https://v6.exchangerate-api.com/v6/910ab09f145c5695a5228187/latest/ZAR')
+            information_json = self.information.json()
 
-    if not sel.isalpha():
-        messagebox.showerror('Account Holder Name', 'Please make sure account holder name is entered correctly')
+            self.conversion_rate = information_json['conversion_rates']
+        except requests.exceptions.ConnectionError:
+            messagebox.showerror("Error", "No internet connection. Please try again later.")
+        # Listbox
+        self.convert_list = Listbox(root, width=15, bg="white")
+        for i in self.conversion_rate.keys():
+            self.convert_list.insert(END, str(i))
+            self.convert_list.place(x=370, y=500)
 
-    elif not sel2.isdigit():
-        messagebox.showerror('Account Number', 'Please make sure account number is entered correctly')
+    # Defining the buttons
+    # Defining my conversion button
+    def convert(self):
+        try:
+            information = requests.get('https://v6.exchangerate-api.com/v6/910ab09f145c5695a5228187/latest/ZAR')
+            information_json = information.json()
 
-    elif default_var.get() == "Select Bank":
-        messagebox.showerror('Bank', 'Please select a bank')
+            conversion_rate = information_json['conversion_rates']
+
+            num = float(self.ent3.get())
+            ans = num * information_json['conversion_rates'][self.convert_list.get(ACTIVE)]
+            self.ent4.delete(0, END)
+            self.ent4.insert(0, ans)
+        except (ValueError, requests.exceptions.ConnectionError):
+            self.ent3.delete(0, END)
+            self.ent4.delete(0, END)
+            messagebox.showerror("Error", "Please enter digits")
+
+    def verify(self):
+        pass
+
+    # Defining the submit button
+    def check(self):
+
+        sel = self.ent1.get()
+        sel2 = self.ent2.get()
+
+        # text file
+        w = open("user_details.txt", "a+")
+        w.write("Account Holder Name: " + str(sel) + "," + " " + "Account Number: " + str(sel2) + "," + " " + "Bank: " + self.default_var.get() + " " + "&" + " " + "Winnings Claimed at: " + str(now) + "\n")
+        w.close()
+
+        # Account holder error
+        if not sel.isalpha():
+            messagebox.showerror('Account Holder Name', 'Please make sure account holder name is entered correctly')
+
+        # Account number error
+        elif not sel2.isdigit():
+            messagebox.showerror('Account Number', 'Please make sure account number is entered correctly')
+
+        # No Bank selected error
+        elif self.default_var.get() == "Select Bank":
+            messagebox.showerror('Bank', 'Please select a bank')
+
+    # Defining my clear button
+    def clear(self):
+        playsound("clear.mp3")
+        self.ent1.delete(0, END)
+        self.ent2.delete(0, END)
+        self.default_var.set(self.default_txt)
+
+    # Defining my exit button with messagebox
+    def exit_btn(self):
+        playsound("exit.mp3")
+        msg = messagebox.askquestion("Termination", "Are you sure you want to close the program?")
+        if msg == "yes":
+            root.destroy()
 
 
-def clear():
-    playsound("clear.mp3")
-    ent1.delete(0, END)
-    ent2.delete(0, END)
-    default_var.set(default_txt)
-
-
-def exit_btn():
-    playsound("exit.mp3")
-    msg = messagebox.askquestion("Termination", "Are you sure you want to close the program?")
-    if msg == "yes":
-        root.destroy()
-
-
-# Labels
-lbl1 = Label(root, text="Banking Details", font=("Arial", 30))
-lbl1.place(x=100, y=30)
-lbl2 = Label(root, text="Account Holder Name", font=("Arial", 12))
-lbl2.place(x=50, y=100)
-lbl3 = Label(root, text="Account number", font=("Arial", 12))
-lbl3.place(x=50, y=150)
-lbl4 = Label(root, text="Bank", font=("Arial", 12))
-lbl4.place(x=50, y=200)
-
-
-# Entries
-ent1 = Entry(root, width=20)
-ent1.place(x=250, y=100)
-ent2 = Entry(root, width=20)
-ent2.place(x=250, y=150)
-
-
-# OptionMenu
-default_txt = "Select Bank"
-default_var = tkinter.StringVar(value=default_txt)
-optmenu = OptionMenu(root, default_var, "Absa Bank", "Capitec Bank", "Standard Bank", "First National Bank")
-optmenu.place(x=250, y=200)
-
-
-# Buttons
-btn = Button(root, text="Submit", width=5, bg="green", command=check, borderwidth=5)
-btn.place(x=220, y=300)
-clrbtn = Button(root, text="Clear", width=5, bg="green", command=clear, borderwidth=5)
-clrbtn.place(x=50, y=300)
-extbtn = Button(root, text="Exit", width=5, bg="green", command=exit_btn, borderwidth=5)
-extbtn.place(x=380, y=300)
+obj_BankDetails = BankDetails(root)
 
 
 # Run Program

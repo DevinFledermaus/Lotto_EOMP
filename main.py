@@ -32,7 +32,7 @@ def age_check():
 
     # text file
     w = open("user_details.txt", "a+")
-    w.write(ent1.get() + " " + " " + ent2.get() + " " + " " + ent3.get() + " " + " " + "Player-ID: " + str(player_id) + " " + " " + "Logged in at " + str(now) + "\n")
+    w.write("Name: " + ent1.get() + "," + " " + "E-Mail: " + ent2.get() + "," + " " + "ID Number: " + ent3.get() + "," + " " + "Player-ID: " + str(player_id) + " " + "&" + " " + "Logged in at " + str(now) + "\n")
     w.close()
 
     id_num = ent3.get()

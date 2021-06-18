@@ -3,6 +3,7 @@ from tkinter import *
 from tkinter import messagebox
 from playsound import playsound
 import random
+from datetime import datetime
 
 
 # Creating the window
@@ -12,6 +13,8 @@ root.resizable(False, False)
 root.title("Lottery")
 root.config(bg="blue")
 
+now = datetime.now()
+
 
 # Defining my buttons
 # Play Button
@@ -20,7 +23,7 @@ def roll():
         # Spinbox Error
         if int(spnbox1.get()) < 50 and int(spnbox2.get()) < 50 and int(spnbox3.get()) < 50 and int(spnbox4.get()) < 50 and int(spnbox5.get()) < 50 and int(spnbox6.get()) < 50:
             # generating random numbers
-            # playsound("roll.mp3")
+            playsound("roll.mp3")
             nums = list(range(1, 49))
             random.shuffle(nums)
             lotto_draw = nums[:6]
@@ -63,10 +66,17 @@ def roll():
             comparison = (set(my_list1).intersection(set(my_list2)))
             results = len(comparison)
             messagebox.showinfo("Winnings", "You have " + str(results) + " winning balls")
+            prizes = {6: "R10 000 000.00", 5: "R8 584.00", 4: "R2 384.00", 3: "R100.50", 2: "R20.00", 1: "R0", 0: "R0"}
+            x = {prizes.get(results)}
+
+            # text file
+            w = open("user_details.txt", "a+")
+            w.write("The Lotto Numbers are: " + str(lotto_draw) + "," + " " + "Your Numbers are: " + str(my_list1) + "," + " " + "Your Total Winnings are: " + str(x) + " " + "&" + " " + "Lotto Played at: " + str(now) + "\n")
+            w.close()
 
             # Winnings
             if results <= 1:
-                # playsound("joker_laugh.mp3")
+                playsound("joker_laugh.mp3")
                 messagebox.showinfo("WINNINGS!!!!", " You do not win anything")
             elif results == 2:
                 messagebox.showinfo("WINNINGS!!!!", " You win R20.00, Please refer to Godwin and Thapelo for your Winnings")
@@ -93,7 +103,6 @@ def roll():
                 msg = messagebox.askquestion("Claim Prize", "Do you want to claim your prize??")
                 if msg == "yes":
                     claim()
-
         else:
             messagebox.showerror("ERROR", "Please enter the proper numbers")
     except ValueError:
