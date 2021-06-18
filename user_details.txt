@@ -1,16 +1,27 @@
-Devin Fledermaus  defledermaus86@gmail.com  Logged in at2021-06-15 14:40:01.737752
-Devin Fledermaus  defledermaus86@gamil.com  9705105019082  Logged in at2021-06-15 14:42:21.652885
-  d.e.fledermaus86@gmail.com  9705105019082  Logged in at 2021-06-15 14:47:29.528539
-Devin Fledermaus  d.e.fledermaus86@gmail.com  9705105019082  Player-ID: 22816031-559b-4028-a11d-de1ac49574bc  Logged in at 2021-06-15 16:01:13.883402
-Devin Fledermaus  d.e.fledermaus86@gmail.com  9705105019082  Player-ID: 68a962da-f25e-4e2c-90cb-ed05c0976aa0  Logged in at 2021-06-17 10:03:53.621617
-Aneeqah  aneeqahjones2@gmail.com  9603050377086  Player-ID: 797f56e9-f48f-42c2-ac47-ff012ecb7ab9  Logged in at 2021-06-17 12:17:00.773056
-Ghiyaath williams  ghiyaathwilliams2@gmail.com  0012235091084  Player-ID: fd510292-0f9d-4aa5-9b72-bf23c2f6a3b2  Logged in at 2021-06-17 14:12:59.610924
-Devin Flederrmaus  d.e.fledermaus86@gmail.com  9705105019082  Player-ID: 68452da9-4a99-4b50-a38c-76c895df9666  Logged in at 2021-06-18 10:02:23.128706
-[1, 17, 20, 11, 28, 24]  [1, 1, 1, 1, 1, 1]  {'R0'}  Logged in at 2021-06-18 11:28:59.176418
-The Lotto Numbers are:   [7, 1, 4, 18, 24, 26]  Your Numbers are:   [34, 32, 23, 13, 11, 7]  {'R0'}  Logged in at 2021-06-18 11:31:32.062745
-The Lotto Numbers are: [4, 27, 46, 28, 8, 23] Your Numbers are: [23, 7, 13, 38, 43, 6] Your Total Winnings are: {'R0'} Lotto Played at: 2021-06-18 11:34:45.925032
-Name: Devin Fledermaus, E-Mail: d.e.fledermaus86@gmail.com, ID Number9705105019082, Player-ID: 404ac323-591a-40d4-bf41-fe5513d95f5b & Logged in at 2021-06-18 11:46:13.823164
-Name: Devin Fledermaus, E-Mail: d.e.fledermaus86@gmail.com, ID Number: 9705105019082, Player-ID: 28a847c9-ed41-4215-91e7-d671d7721281 & Logged in at 2021-06-18 11:54:32.270256
-The Lotto Numbers are: [11, 33, 38, 44, 39, 31], Your Numbers are: [23, 13, 18, 20, 43, 7], Your Total Winnings are: {'R0'}& Lotto Played at: 2021-06-18 11:55:19.215345
-Account Holder Name: jkshdgfc, Account Number: 5426465, Bank: PY_VAR0 & Winnings Claimed at: 2021-06-18 12:03:35.147093
-Account Holder Name: sjhvgnidfgvnu, Account Number: 62874284598, Bank: Standard Bank & Winnings Claimed at: 2021-06-18 12:04:22.282980
+Name: Devin Fledermaus, E-Mail: d.e.fledermaus86@gamil.com, ID Number: 9705105019082, Player-ID: 7b56bc5c-87c0-4086-8c9b-6545e40edd6d & Logged in at 2021-06-18 13:10:57.273904
+The Lotto Numbers are: [8, 19, 14, 3, 2, 31], Your Numbers are: [41, 23, 7, 24, 19, 22], Your Total Winnings are: {'R0'} & Lotto Played at: 2021-06-18 13:11:36.782217
+The Lotto Numbers are: [31, 47, 3, 32, 1, 16], Your Numbers are: [41, 23, 7, 24, 19, 22], Your Total Winnings are: {'R0'} & Lotto Played at: 2021-06-18 13:11:36.782217
+The Lotto Numbers are: [43, 1, 20, 4, 32, 12], Your Numbers are: [41, 23, 7, 24, 19, 22], Your Total Winnings are: {'R0'} & Lotto Played at: 2021-06-18 13:11:36.782217
+The Lotto Numbers are: [35, 3, 47, 16, 1, 43], Your Numbers are: [41, 23, 7, 24, 19, 22], Your Total Winnings are: {'R0'} & Lotto Played at: 2021-06-18 13:11:36.782217
+The Lotto Numbers are: [17, 34, 6, 35, 2, 13], Your Numbers are: [41, 23, 7, 24, 19, 22], Your Total Winnings are: {'R0'} & Lotto Played at: 2021-06-18 13:11:36.782217
+The Lotto Numbers are: [35, 37, 42, 1, 27, 10], Your Numbers are: [41, 23, 7, 24, 19, 22], Your Total Winnings are: {'R0'} & Lotto Played at: 2021-06-18 13:11:36.782217
+The Lotto Numbers are: [34, 10, 38, 14, 8, 13], Your Numbers are: [41, 23, 7, 24, 19, 22], Your Total Winnings are: {'R0'} & Lotto Played at: 2021-06-18 13:11:36.782217
+The Lotto Numbers are: [25, 20, 22, 29, 11, 8], Your Numbers are: [41, 23, 7, 24, 19, 22], Your Total Winnings are: {'R0'} & Lotto Played at: 2021-06-18 13:11:36.782217
+The Lotto Numbers are: [20, 9, 48, 18, 13, 34], Your Numbers are: [41, 23, 7, 24, 19, 22], Your Total Winnings are: {'R0'} & Lotto Played at: 2021-06-18 13:11:36.782217
+Name: Abdur-Razaaq Jardien, E-Mail: zakjardien23@gmail.com, ID Number: 0008045538082, Player-ID: feee48ee-4759-4589-b898-30f92c4f93c2 & Logged in at 2021-06-18 13:50:07.420421
+The Lotto Numbers are: [25, 9, 47, 17, 4, 36], Your Numbers are: [10, 14, 4, 9, 19, 3], Your Total Winnings are: {'R20.00'} & Lotto Played at: 2021-06-18 13:50:55.735171
+Name: Jason Calvert, E-Mail: jasoncee017@gmail.com, ID Number: 9804075027082, Player-ID: f4df0b73-76c6-4f5b-b163-fb69d5887030 & Logged in at 2021-06-18 13:52:47.161176
+The Lotto Numbers are: [43, 47, 25, 40, 11, 5], Your Numbers are: [8, 15, 20, 36, 47, 23], Your Total Winnings are: {'R0'} & Lotto Played at: 2021-06-18 13:53:36.381138
+Account Holder Name: hgsrvbjfdsk, Account Number: 6452842+84, Bank: Capitec Bank & Winnings Claimed at: 2021-06-18 14:28:10.807820
+Account Holder Name: hgsrvbjfdsk, Account Number: 645284284, Bank: Capitec Bank & Winnings Claimed at: 2021-06-18 14:28:10.807820
+Name: Abdur-Razaaq Jardien, E-Mail: zakjardien23@gmail.com, ID Number: 0008045538082, Player-ID: 5ab87ed0-8ad3-4b64-92b4-d023c7d2b5ad & Logged in at 2021-06-18 14:36:02.570439
+The Lotto Numbers are: [30, 22, 41, 48, 26, 21], Your Numbers are: [11, 4, 33, 22, 42, 3], Your Total Winnings are: {'R0'} & Lotto Played at: 2021-06-18 14:36:50.852027
+The Lotto Numbers are: [28, 43, 36, 23, 24, 34], Your Numbers are: [11, 4, 33, 22, 42, 3], Your Total Winnings are: {'R0'} & Lotto Played at: 2021-06-18 14:36:50.852027
+The Lotto Numbers are: [20, 35, 43, 14, 46, 16], Your Numbers are: [11, 4, 33, 24, 29, 3], Your Total Winnings are: {'R0'} & Lotto Played at: 2021-06-18 14:36:50.852027
+The Lotto Numbers are: [24, 21, 1, 34, 16, 26], Your Numbers are: [43, 23, 31, 13, 7, 49], Your Total Winnings are: {'R0'} & Lotto Played at: 2021-06-18 14:39:03.892228
+The Lotto Numbers are: [2, 38, 48, 7, 6, 41], Your Numbers are: [43, 23, 31, 13, 7, 49], Your Total Winnings are: {'R0'} & Lotto Played at: 2021-06-18 14:39:03.892228
+The Lotto Numbers are: [43, 23, 18, 1, 8, 6], Your Numbers are: [43, 23, 31, 13, 7, 49], Your Total Winnings are: {'R20.00'} & Lotto Played at: 2021-06-18 14:39:03.892228
+Account Holder Name: lsefhgvn, Account Number: 628464, Bank: Standard Bank & Winnings Claimed at: 2021-06-18 14:39:34.026252
+Account Holder Name: shgcu, Account Number: 864, Bank: Absa Bank & Winnings Claimed at: 2021-06-18 14:42:17.631749
+Account Holder Name: jsg, Account Number: 68726, Bank: Standard Bank & Winnings Claimed at: 2021-06-18 14:45:18.313394
+Account Holder Name: sdhfcgnoig, Account Number: 64615426, Bank: Absa Bank & Winnings Claimed at: 2021-06-18 14:47:02.980233

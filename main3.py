@@ -5,7 +5,10 @@ from tkinter import messagebox
 from playsound import playsound
 import requests
 from datetime import datetime
-
+import re
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 # Creating the window
 root = Tk()
@@ -85,8 +88,45 @@ class BankDetails:
             self.ent4.delete(0, END)
             messagebox.showerror("Error", "Please enter digits")
 
+    # Sending my email
     def verify(self):
-        pass
+        file_to_read = "user_details.txt"
+        file = open(file_to_read, "r")
+        list_file = file.readline()
+
+        email_list = str(list_file)
+
+        emails = re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", email_list)
+        email = emails[-1]
+
+        sender_email_id = 'd.e.fledermaus86@gmail.com'
+        receiver_email_id = str(emails[-1])
+        password = input("Enter your password: ")
+        subject = "Greetings"
+        msg = MIMEMultipart()
+        msg['From'] = sender_email_id
+        msg['To'] = receiver_email_id
+        msg['Subject'] = subject
+        body = "This is my attempt at sending to multiple recipients\n"
+        body = body + "Hope this works"
+        msg.attach(MIMEText(body, 'plain'))
+        text = msg.as_string()
+        s = smtplib.SMTP('smtp.gmail.com', 587)
+
+        # start TLS for security
+        s.starttls()
+
+        # Authentication
+        s.login(sender_email_id, password)
+        print(receiver_email_id)
+
+        # message to be sent
+
+        # sending the mail
+        s.sendmail(sender_email_id, receiver_email_id, text)
+
+        # terminating the session
+        s.quit()
 
     # Defining the submit button
     def check(self):
@@ -110,6 +150,8 @@ class BankDetails:
         # No Bank selected error
         elif self.default_var.get() == "Select Bank":
             messagebox.showerror('Bank', 'Please select a bank')
+        else:
+            self.verify()
 
     # Defining my clear button
     def clear(self):

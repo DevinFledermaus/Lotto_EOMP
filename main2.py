@@ -23,7 +23,7 @@ def roll():
         # Spinbox Error
         if int(spnbox1.get()) < 50 and int(spnbox2.get()) < 50 and int(spnbox3.get()) < 50 and int(spnbox4.get()) < 50 and int(spnbox5.get()) < 50 and int(spnbox6.get()) < 50:
             # generating random numbers
-            playsound("roll.mp3")
+            # playsound("roll.mp3")
             nums = list(range(1, 49))
             random.shuffle(nums)
             lotto_draw = nums[:6]
@@ -76,7 +76,7 @@ def roll():
 
             # Winnings
             if results <= 1:
-                playsound("joker_laugh.mp3")
+                # playsound("joker_laugh.mp3")
                 messagebox.showinfo("WINNINGS!!!!", " You do not win anything")
             elif results == 2:
                 messagebox.showinfo("WINNINGS!!!!", " You win R20.00, Please refer to Godwin and Thapelo for your Winnings")
