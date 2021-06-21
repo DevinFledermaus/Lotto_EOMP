@@ -1,37 +1,55 @@
-Name: Devin Fledermaus, E-Mail: d.e.fledermaus86@gmail.com, ID Number: 9705105019082, Player-ID: 165e5fe5-5a64-4e23-b846-14547d64a6a7 & Logged in at 2021-06-21 16:06:29.063448
-The Lotto Numbers are: [24, 37, 19, 7, 46, 11]
-Your Numbers are: [23, 49, 18, 36, 17, 7]
+Name: Devin Fledermaus
+E-Mail: d.e.fledermaus86@gmail.com
+ID Number: 9705105019082
+Player-ID: 1716ab71-0f7a-42c0-81a1-c4b0e8227932
+Logged in at 2021-06-21 16:27:30.328546 &
+
+The Lotto Numbers are: [14, 43, 12, 13, 29, 18]
+Your Numbers are: [23, 7, 19, 43, 10, 33]
 prize is: R0&
-Lotto Played at: 2021-06-21 16:07:01.752739
-The Lotto Numbers are: [3, 5, 15, 16, 38, 43]
-Your Numbers are: [23, 49, 18, 36, 17, 7]
+Lotto Played at: 2021-06-21 16:28:07.872214 &
+
+The Lotto Numbers are: [5, 31, 16, 29, 11, 48]
+Your Numbers are: [23, 7, 19, 43, 10, 33]
 prize is: R0&
-Lotto Played at: 2021-06-21 16:07:01.752739
-The Lotto Numbers are: [33, 27, 45, 36, 39, 19]
-Your Numbers are: [23, 49, 18, 36, 17, 7]
+Lotto Played at: 2021-06-21 16:28:07.872214 &
+
+The Lotto Numbers are: [21, 18, 24, 38, 19, 41]
+Your Numbers are: [23, 7, 19, 43, 10, 33]
 prize is: R0&
-Lotto Played at: 2021-06-21 16:07:01.752739
-The Lotto Numbers are: [16, 34, 33, 24, 13, 15]
-Your Numbers are: [23, 49, 18, 36, 17, 7]
+Lotto Played at: 2021-06-21 16:28:07.872214 &
+
+The Lotto Numbers are: [8, 11, 43, 31, 48, 36]
+Your Numbers are: [23, 7, 19, 43, 10, 33]
 prize is: R0&
-Lotto Played at: 2021-06-21 16:07:01.752739
-The Lotto Numbers are: [47, 15, 41, 29, 30, 42]
-Your Numbers are: [23, 49, 18, 36, 17, 7]
+Lotto Played at: 2021-06-21 16:28:07.872214 &
+
+The Lotto Numbers are: [44, 11, 45, 40, 27, 33]
+Your Numbers are: [23, 7, 19, 43, 10, 33]
 prize is: R0&
-Lotto Played at: 2021-06-21 16:07:01.752739
-The Lotto Numbers are: [15, 18, 12, 32, 8, 31]
-Your Numbers are: [23, 49, 18, 36, 17, 7]
+Lotto Played at: 2021-06-21 16:28:07.872214 &
+
+The Lotto Numbers are: [28, 47, 42, 45, 40, 39]
+Your Numbers are: [23, 7, 19, 43, 10, 33]
 prize is: R0&
-Lotto Played at: 2021-06-21 16:07:01.752739
-The Lotto Numbers are: [18, 25, 1, 39, 40, 15]
-Your Numbers are: [23, 49, 18, 36, 17, 7]
+Lotto Played at: 2021-06-21 16:28:07.872214 &
+
+The Lotto Numbers are: [7, 45, 42, 20, 4, 11]
+Your Numbers are: [23, 7, 19, 43, 10, 33]
 prize is: R0&
-Lotto Played at: 2021-06-21 16:07:01.752739
-The Lotto Numbers are: [31, 17, 16, 22, 40, 32]
-Your Numbers are: [23, 49, 18, 36, 17, 7]
-prize is: R0&
-Lotto Played at: 2021-06-21 16:07:01.752739
-The Lotto Numbers are: [48, 14, 8, 7, 43, 13]
-Your Numbers are: [23, 49, 18, 36, 14, 7]
+Lotto Played at: 2021-06-21 16:28:07.872214 &
+
+The Lotto Numbers are: [14, 1, 7, 26, 33, 18]
+Your Numbers are: [23, 7, 19, 43, 10, 33]
 prize is: R20.00&
-Lotto Played at: 2021-06-21 16:07:01.752739
+Lotto Played at: 2021-06-21 16:28:07.872214 &
+
+Account Holder Name: Devin
+Account Number: 987456321
+Bank: Capitec Bank &
+Winnings Claimed at: 2021-06-21 16:30:52.229401
+Account Holder Name: Devin
+Account Number: 987456321
+Bank: Capitec Bank
+Logged in at 2021-06-21 16:30:52.229401 &
+

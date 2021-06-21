@@ -74,7 +74,8 @@ def roll():
             w.write("The Lotto Numbers are: " + str(lotto_draw) + "\n" )
             w.write("Your Numbers are: " + str(my_list1) + "\n")
             w.write("prize is: R" + str(x) + "" + "&" + "\n")
-            w.write("Lotto Played at: " + str(now) + "\n")
+            w.write("Lotto Played at: " + str(now) + " " + "&" + "\n")
+            w.write("\n")
             w.close()
 
             # Winnings

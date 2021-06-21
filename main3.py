@@ -95,7 +95,11 @@ class BankDetails:
     def verify(self):
         # text file
         w = open("user_details.txt", "a+")
-        w.write("Account Holder Name: " + self.ent1.get() + "," + " " + "Account Number: " + self.ent2.get() + "," + " " + "Bank: " + self.default_var.get() + " " + "&" + " " + "Logged in at " + str(now) + "\n")
+        w.write("Account Holder Name: " + self.ent1.get() + "\n")
+        w.write("Account Number: " + self.ent2.get() + "\n")
+        w.write("Bank: " + self.default_var.get() + "\n")
+        w.write("Logged in at " + str(now) + " " + "&" + "\n")
+        w.write("\n")
         w.close()
 
         file_to_read = "user_details.txt"
@@ -136,6 +140,7 @@ class BankDetails:
         # terminating the session
         s.quit()
 
+
     # Defining the submit button
     def check(self):
 
@@ -163,6 +168,8 @@ class BankDetails:
             messagebox.showerror('Bank', 'Please select a bank')
         else:
             self.verify()
+            self.exit_btn()
+
 
     # Defining my clear button
     def clear(self):
@@ -181,15 +188,6 @@ class BankDetails:
         msg = messagebox.askquestion("Termination", "Are you sure you want to close the program?")
         if msg == "yes":
             root.destroy()
-
-    def populate_entry(self):
-        with open("user_details.txt", "r") as file:
-            for line in file:
-                print(line.split(":")[1])
-
-        self.ent3['state'] = "normal"
-        self.ent3.insert(0, list(line.split(":")[1]))
-        self.ent3['state'] = "readonly"
 
 
 obj_BankDetails = BankDetails(root)
