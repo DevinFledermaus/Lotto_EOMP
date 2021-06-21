@@ -2,6 +2,9 @@ from doctest import testmod
 import unittest
 import random
 
+import main
+from main import *
+
 
 def randomnumbers():
     x = random.sample(range(1, 49), 6)
@@ -19,6 +22,3 @@ class RandomNums(unittest.TestCase):
         self.assertTrue(self.a >= 1 and self.b <= 49)
         if __name__ == "__main__":
             unittest.main()
-
-    def testEnter(self):
-

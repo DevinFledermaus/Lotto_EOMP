@@ -37,7 +37,7 @@ class BankDetails:
         self.ent1.place(x=300, y=100)
         self.ent2 = Entry(root, width=30)
         self.ent2.place(x=300, y=150)
-        self.ent3 = Entry(root, width=20, state="readonly")
+        self.ent3 = Entry(root, width=20)
         self.ent3.place(x=150, y=500)
         self.ent4 = Entry(root, width=20, state="readonly")
         self.ent4.place(x=150, y=650)
@@ -82,8 +82,10 @@ class BankDetails:
 
             num = float(self.ent3.get())
             ans = num * information_json['conversion_rates'][self.convert_list.get(ACTIVE)]
+            self.ent4['state'] = 'normal'
             self.ent4.delete(0, END)
             self.ent4.insert(0, ans)
+            self.ent4['state'] = 'readonly'
         except (ValueError, requests.exceptions.ConnectionError):
             self.ent3.delete(0, END)
             self.ent4.delete(0, END)
@@ -168,6 +170,10 @@ class BankDetails:
         self.ent1.delete(0, END)
         self.ent2.delete(0, END)
         self.default_var.set(self.default_txt)
+        self.ent3.delete(0, END)
+        self.ent4['state'] = "normal"
+        self.ent4.delete(0, END)
+        self.ent4['state'] = "readonly"
 
     # Defining my exit button with messagebox
     def exit_btn(self):
