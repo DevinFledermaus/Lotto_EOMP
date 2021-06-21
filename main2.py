@@ -23,7 +23,7 @@ def roll():
         # Spinbox Error
         if int(spnbox1.get()) < 50 and int(spnbox2.get()) < 50 and int(spnbox3.get()) < 50 and int(spnbox4.get()) < 50 and int(spnbox5.get()) < 50 and int(spnbox6.get()) < 50:
             # generating random numbers
-            # playsound("roll.mp3")
+            playsound("roll.mp3")
             nums = list(range(1, 49))
             random.shuffle(nums)
             lotto_draw = nums[:6]
@@ -66,39 +66,47 @@ def roll():
             comparison = (set(my_list1).intersection(set(my_list2)))
             results = len(comparison)
             messagebox.showinfo("Winnings", "You have " + str(results) + " winning balls")
-            prizes = {6: "R10 000 000.00", 5: "R8 584.00", 4: "R2 384.00", 3: "R100.50", 2: "R20.00", 1: "R0", 0: "R0"}
-            x = {prizes.get(results)}
+            prizes = {6: "10 000 000.00", 5: "8 584.00", 4: "2 384.00", 3: "100.50", 2: "20.00", 1: "0", 0: "0"}
+            x = (prizes.get(results))
 
             # text file
             w = open("user_details.txt", "a+")
-            w.write("The Lotto Numbers are: " + str(lotto_draw) + "," + " " + "Your Numbers are: " + str(my_list1) + "," + " " + "Your Total Winnings are: " + str(x) + " " + "&" + " " + "Lotto Played at: " + str(now) + "\n")
+            w.write("The Lotto Numbers are: " + str(lotto_draw) + "\n" )
+            w.write("Your Numbers are: " + str(my_list1) + "\n")
+            w.write("prize is: R" + str(x) + "" + "&" + "\n")
+            w.write("Lotto Played at: " + str(now) + "\n")
             w.close()
 
             # Winnings
             if results <= 1:
-                # playsound("joker_laugh.mp3")
+                playsound("wasted.mp3")
                 messagebox.showinfo("WINNINGS!!!!", " You do not win anything")
             elif results == 2:
+                playsound("mr_bean_magic.mp3")
                 messagebox.showinfo("WINNINGS!!!!", " You win R20.00, Please refer to Godwin and Thapelo for your Winnings")
                 msg = messagebox.askquestion("Claim Prize", "Do you want to claim your prize??")
                 if msg == "yes":
                     claim()
             elif results == 3:
+                playsound("mr_bean_magic.mp3")
                 messagebox.showinfo("WINNINGS!!!!", " You win R100.50, Please refer to Godwin and Thapelo for your Winnings")
                 msg = messagebox.askquestion("Claim Prize", "Do you want to claim your prize??")
                 if msg == "yes":
                     claim()
             elif results == 4:
+                playsound("mr_bean_magic.mp3")
                 messagebox.showinfo("WINNINGS!!!!", " You win R2 384.00, Please refer to Godwin and Thapelo for your Winnings")
                 msg = messagebox.askquestion("Claim Prize", "Do you want to claim your prize??")
                 if msg == "yes":
                     claim()
             elif results == 5:
+                playsound("mr_bean_magic.mp3")
                 messagebox.showinfo("WINNINGS!!!!", " You win R8 584.00, Please refer to Godwin and Thapelo for your Winnings")
                 msg = messagebox.askquestion("Claim Prize", "Do you want to claim your prize??")
                 if msg == "yes":
                     claim()
             else:
+                playsound("joker_laugh.mp3")
                 messagebox.showinfo("WINNINGS!!!!", " You WIN the Jackpot of R10 Million, Please refer to Godwin and Thapelo for your Winnings")
                 msg = messagebox.askquestion("Claim Prize", "Do you want to claim your prize??")
                 if msg == "yes":

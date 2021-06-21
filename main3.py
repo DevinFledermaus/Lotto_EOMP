@@ -37,9 +37,9 @@ class BankDetails:
         self.ent1.place(x=300, y=100)
         self.ent2 = Entry(root, width=30)
         self.ent2.place(x=300, y=150)
-        self.ent3 = Entry(root, width=20)
+        self.ent3 = Entry(root, width=20, state="readonly")
         self.ent3.place(x=150, y=500)
-        self.ent4 = Entry(root, width=20)
+        self.ent4 = Entry(root, width=20, state="readonly")
         self.ent4.place(x=150, y=650)
         # OptionMenu
         self.default_txt = "Select Bank"
@@ -57,6 +57,7 @@ class BankDetails:
         self.conbtn.place(x=150, y=570)
         # Retrieving the information from an external JSON file as a source of reference
         self.conversion_rate = {}
+
         try:
             self.information = requests.get('https://v6.exchangerate-api.com/v6/910ab09f145c5695a5228187/latest/ZAR')
             information_json = self.information.json()
@@ -90,25 +91,30 @@ class BankDetails:
 
     # Sending my email
     def verify(self):
+        # text file
+        w = open("user_details.txt", "a+")
+        w.write("Account Holder Name: " + self.ent1.get() + "," + " " + "Account Number: " + self.ent2.get() + "," + " " + "Bank: " + self.default_var.get() + " " + "&" + " " + "Logged in at " + str(now) + "\n")
+        w.close()
+
         file_to_read = "user_details.txt"
         file = open(file_to_read, "r")
-        list_file = file.readline()
+        list_file = file.readlines()
 
         email_list = str(list_file)
 
         emails = re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", email_list)
         email = emails[-1]
 
-        sender_email_id = 'd.e.fledermaus86@gmail.com'
-        receiver_email_id = str(emails[-1])
-        password = input("Enter your password: ")
-        subject = "Greetings"
+        sender_email_id = 'lottodevin@gmail.com'
+        receiver_email_id = email
+        password = "Pythonlotto"
+        subject = "Congratulations"
         msg = MIMEMultipart()
         msg['From'] = sender_email_id
         msg['To'] = receiver_email_id
         msg['Subject'] = subject
-        body = "This is my attempt at sending to multiple recipients\n"
-        body = body + "Hope this works"
+        body = "You have won the lottery.\n"
+        body = body + "You will be contacted for further details"
         msg.attach(MIMEText(body, 'plain'))
         text = msg.as_string()
         s = smtplib.SMTP('smtp.gmail.com', 587)
@@ -136,7 +142,10 @@ class BankDetails:
 
         # text file
         w = open("user_details.txt", "a+")
-        w.write("Account Holder Name: " + str(sel) + "," + " " + "Account Number: " + str(sel2) + "," + " " + "Bank: " + self.default_var.get() + " " + "&" + " " + "Winnings Claimed at: " + str(now) + "\n")
+        w.write("Account Holder Name: " + str(sel) + "\n")
+        w.write("Account Number: " + str(sel2) + "\n")
+        w.write("Bank: " + self.default_var.get() + " " + "&" + "\n")
+        w.write("Winnings Claimed at: " + str(now) + "\n")
         w.close()
 
         # Account holder error
@@ -166,6 +175,15 @@ class BankDetails:
         msg = messagebox.askquestion("Termination", "Are you sure you want to close the program?")
         if msg == "yes":
             root.destroy()
+
+    def populate_entry(self):
+        with open("user_details.txt", "r") as file:
+            for line in file:
+                print(line.split(":")[1])
+
+        self.ent3['state'] = "normal"
+        self.ent3.insert(0, list(line.split(":")[1]))
+        self.ent3['state'] = "readonly"
 
 
 obj_BankDetails = BankDetails(root)
